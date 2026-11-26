@@ -1,0 +1,26 @@
+#!/sbin/openrc-run
+# Copyright 2026 Gentoo Authors
+# Distributed under the terms of the GNU General Public License v2
+
+name="Tronbyt Server"
+description="Self-hosted server for Tronbyt/Tidbyt devices"
+
+command="/usr/bin/tronbyt-server"
+command_user="tronbyt:tronbyt"
+command_background=true
+pidfile="/run/${RC_SVCNAME}.pid"
+directory="${DATA_DIR:-/var/lib/tronbyt}"
+
+output_log="/var/log/tronbyt/tronbyt-server.log"
+error_log="/var/log/tronbyt/tronbyt-server.log"
+
+depend() {
+	need net
+	after localmount
+}
+
+start_pre() {
+	checkpath -d -o tronbyt:tronbyt -m 0750 "${DATA_DIR:-/var/lib/tronbyt}"
+	checkpath -d -o tronbyt:tronbyt -m 0750 /var/log/tronbyt
+	checkpath -f -o tronbyt:tronbyt -m 0640 "${output_log}"
+}

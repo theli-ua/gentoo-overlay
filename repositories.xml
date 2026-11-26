@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE repositories SYSTEM "http://www.gentoo.org/dtd/repositories.dtd">
+<repositories xmlns="" version="1.0">
+  <repo quality="experimental" status="unofficial">
+    <name>theli-ua</name>
+    <description lang="en">Personal Gentoo overlay by theli-ua</description>
+    <homepage>https://github.com/theli-ua/gentoo-overlay</homepage>
+    <owner type="person">
+      <email>theli.ua@gmail.com</email>
+      <name>Anton Romanov</name>
+    </owner>
+    <source type="git">https://github.com/theli-ua/gentoo-overlay.git</source>
+  </repo>
+</repositories>

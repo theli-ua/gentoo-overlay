@@ -1,0 +1,14 @@
+# /etc/conf.d/tronbyt-server
+
+export DATA_DIR="/var/lib/tronbyt"
+export DB_DSN="/var/lib/tronbyt/tronbyt.db"
+export PRODUCTION="true"
+export TRONBYT_HOST=""
+export TRONBYT_PORT="8000"
+export LOG_LEVEL="INFO"
+
+# Optional:
+# export ENABLE_USER_REGISTRATION="false"
+# export SINGLE_USER_AUTO_LOGIN="false"
+# export SYSTEM_APPS_AUTO_REFRESH="true"
+# export SYSTEM_APPS_REPO="https://github.com/tronbyt/apps.git"
